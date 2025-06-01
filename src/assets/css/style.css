@@ -5566,8 +5566,8 @@ iframe.ca-map {
     color: #0E47A1;
 }
 .ca-btn-cta-3 .ca-btn-primary-3 span {
-    background: #CFDAEC;
-    color:#2B5DAC;
+    background: #2B5DAC;
+    color:#FFC107;
 }
 .ca-cta-shape3 {
     left: 50%;
@@ -5758,7 +5758,7 @@ iframe.ca-map-4 {
     transition: .3s;
 }
 .ca-footer-social ul li a:hover{
-    background: #FF5E14;
+    background: #00a323;
     color:#fff;
     transition: .3s;
 }
@@ -5854,7 +5854,7 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     transition: .3s;
 }
 .ca-footer-social-3 ul li a:hover{
-    background: #0E47A1;
+    background: #fae900;
     color: #fff;
     transition: .3s;
 }
