@@ -1,9 +1,8 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
+
 const Index1 = lazy(() => import("../app/index-1/page"));
-const Index2 = lazy(() => import("../app/index-2/page"));
-const Index3 = lazy(() => import("../app/index-3/page"));
-const Index4 = lazy(() => import("../app/index-4/page"));
+
 const About = lazy(() => import("../app/(common)/about/page"));
 const Contact = lazy(() => import("../app/(common)/contact/page"));
 const Blog = lazy(() => import("../app/(common)/blog/page"));
@@ -23,6 +22,7 @@ const Services = lazy(() => import("../app/(common)/services/page"));
 const ServicesLeft = lazy(() => import("../app/(common)/services/left/page"));
 const ServiceRight = lazy(() => import("../app/(common)/services/right/page"));
 const ServiceSingle = lazy(() => import("../app/(common)/services/single/page"));
+
 export const landingRoutes = [{
   path: "/",
   name: "index1",
@@ -31,19 +31,8 @@ export const landingRoutes = [{
   path: "/index-1",
   name: "index1",
   element: <Index1 />
-}, {
-  path: "/index-2",
-  name: "index2",
-  element: <Index2 />
-}, {
-  path: "/index-3",
-  name: "index3",
-  element: <Index3 />
-}, {
-  path: "/index-4",
-  name: "index4",
-  element: <Index4 />
 }];
+
 export const pageRoutes = [{
   path: "/about",
   name: "about",
