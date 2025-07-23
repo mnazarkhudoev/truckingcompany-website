@@ -28,7 +28,7 @@ const footerData = {
     { text: "Certifications", url: "#" }
   ],
   subscriptionText: "Subscribe us & receive our latest news & articles",
-  copyrightText: "Copyright © 2024 Cargon. All Rights Reserved",
+  copyrightText: "Copyright © 2025 Iron Bull. All Rights Reserved",
   legalLinks: [
     { text: "Terms & Conditions", url: "#" },
     { text: "Privacy Policy", url: "#" }
@@ -54,7 +54,7 @@ const Footer = () => {
               <div className="ca-cta-content">
                 <h2
                   className="ca-section-title cta-title-1 fnw-700"
-                  style={{ color: "#FFC107" }} // Yellow title
+                  style={{ color: "#f12d21" }} // Yellow title
                 >
                   Join Us Today And let Us Help You To Grow Your Business.
                 </h2>
@@ -67,7 +67,7 @@ const Footer = () => {
                   className="ca-btn-primary-3 w-bg"
                   style={{
                     backgroundColor: "#000", // Button black background
-                    color: "#FFC107", // Yellow text
+                    color: "#f12d21", // Yellow text
                     textDecoration: "none"
                   }}
                 >
@@ -114,14 +114,14 @@ const Footer = () => {
 
               <Col xl md={6} className="mb-30">
                 <div className="ca-footer widget-2">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#FFC107" }}>
+                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
                     Quick Links
                   </h4>
                   <div className="ca-footer-menu ca-footer-menu-3">
                     <ul>
                       {footerData.quickLinks.map((link, index) => (
                         <li key={index}>
-                          <Link to={link.url} style={{ color: "#FFC107" }}>
+                          <Link to={link.url} style={{ color: "#f12d21" }}>
                             {link.text}
                           </Link>
                         </li>
@@ -133,14 +133,14 @@ const Footer = () => {
 
               <Col xl md={6} className="mb-30">
                 <div className="ca-footer widget-3">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#FFC107" }}>
+                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
                     Other Links
                   </h4>
                   <div className="ca-footer-menu ca-footer-menu-3">
                     <ul>
                       {footerData.otherLinks.map((link, index) => (
                         <li key={index}>
-                          <Link to={link.url} style={{ color: "#FFC107" }}>
+                          <Link to={link.url} style={{ color: "#f12d21" }}>
                             {link.text}
                           </Link>
                         </li>
@@ -152,7 +152,7 @@ const Footer = () => {
 
               <Col xl={4} md={6} className="mb-30">
                 <div className="ca-footer widget-4">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#FFC107" }}>
+                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
                     Subscribe
                   </h4>
                   <div className="ca-ft-content">
@@ -168,7 +168,7 @@ const Footer = () => {
                         style={{
                           backgroundColor: "#333",
                           borderColor: "#FFC107",
-                          color: "#FFC107" // The input text remains yellow; placeholder will be white via the CSS rule
+                          color: "#E8D8D0" // The input text remains yellow; placeholder will be white via the CSS rule
                         }}
                       />
                     </form>
@@ -178,8 +178,8 @@ const Footer = () => {
                       value="submit"
                       style={{
                         backgroundColor: "#000",
-                        color: "#FFC107",
-                        border: "1px solid #FFC107"
+                        color: "#f12d21",
+                        border: "1px solid rgb(243, 237, 237)"
                       }}
                     >
                       Subscribe Now{" "}
@@ -194,7 +194,7 @@ const Footer = () => {
 
             <Row>
               <Col lg={12}>
-                <div className="copy-right-border border-1" style={{ borderColor: "#FFC107" }}></div>
+                <div className="copy-right-border border-1" style={{ borderColor: "#E8D8D0" }}></div>
               </Col>
               <div className="col-lg-6">
                 <p className="copry-right-text pt-24" style={{ color: "#fff" }}>
@@ -206,7 +206,7 @@ const Footer = () => {
                   <ul>
                     {footerData.legalLinks.map((link, index) => (
                       <li key={index}>
-                        <Link to={link.url} style={{ color: "#FFC107" }}>
+                        <Link to={link.url} style={{ color: "#f12d21" }}>
                           {link.text}
                         </Link>
                       </li>

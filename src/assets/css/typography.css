@@ -118,7 +118,7 @@ a:focus {
 /* colors */
 
 .w-bg{
-    background: #fff;
+    background: #b7b7b7;
     transition: .3s;
 }
 .bg-wh-op{
@@ -132,7 +132,7 @@ a:focus {
     background: #F9F5F3;
 }
 .cream-bg-3{
-    background: #F8F9FA;
+    background: #000000;
 }
 
 .off-wh{
@@ -183,7 +183,7 @@ a:focus {
     color: #0C0504;
 }
 .theme-black-3{
-    color: #00060F;
+    color: #f12d21;
 }
 .theme-black-4{
     color: #021013;
@@ -192,7 +192,7 @@ a:focus {
     background: #021013;
 }
 .theme-black-bg-3{
-    background: #00060F;
+    background: #0b0c0c;
 }
 .theme-black-bg-2{
     background: #0C0504;
@@ -211,7 +211,7 @@ a:focus {
     background: #D11207;
 }
 .theme-color-3{
-    color: #0E47A1;
+    color: #f12d21;
 }
 .theme-bg-3{
     background: #0E47A1;
@@ -339,6 +339,7 @@ a:focus {
 }
 .pb-32{
     padding-bottom: 32px;
+    color: #f8f8f8;
 }
 .pb-40{
     padding-bottom: 40px;
