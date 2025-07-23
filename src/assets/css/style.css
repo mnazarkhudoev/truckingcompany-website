@@ -5382,6 +5382,9 @@ iframe.ca-map {
 /* ============================================
                     BLOG Style 3
 ============================================ */
+.ca-blog{
+    background: black;
+}
 .ca-blog-date-3 {
     background: #00060F;
     display: inline-block;
@@ -5404,7 +5407,7 @@ iframe.ca-map {
     padding-top: 30px;
 }
 .ca-blog-title-3 a{
-    color: #00060F;
+    color: #ffffff;
     transition: .3s;
     text-transform: capitalize;
 }
