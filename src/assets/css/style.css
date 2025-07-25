@@ -1106,7 +1106,7 @@ header.header-area-3.stiky.scroll-header .header-3 {
     left: 12px;
 }
 .ca-sec-content-3 p {
-    color: #5A5D63;
+    color: white;
     font-size: 16px;
     line-height: 24px;
 }
@@ -2325,6 +2325,9 @@ header.header-4 {
     font-size: 44px;
     line-height: 44px;
 }
+.ca-about-3 {
+    background: black;
+}
 .ca-about-title {
     font-size: 44px;
     line-height: 52px;
@@ -2514,6 +2517,9 @@ header.header-4 {
     color: #fff;
     opacity: .8;
 }
+section.ca-portfilo-2 {
+    background: #000 !important;
+}
 .ca-portfolio-2-item:hover .ca-portfolio-2-overlay-content{
     transform: translateY(0);
     opacity: 1;
@@ -2566,6 +2572,7 @@ header.header-4 {
     margin-top: 16px;
     margin-bottom: 32px;
     padding: 20px;
+    background: #b7b7b7;
 }
 .ca-about-item3 p{
     color:#5A5D63;
@@ -2573,7 +2580,7 @@ header.header-4 {
 .ca-about-item3:after {
     position: absolute;
     content: "";
-    background: #0E47A1;
+    background: #D11207;
     border-radius: 5px;
     height: 100%;
     width: 6px;
@@ -2586,7 +2593,7 @@ header.header-4 {
 .ca-item-ch-title {
     font-size: 16px;
     line-height: 16px;
-    color: #00060F;
+    color: white;
     font-weight: 600;
 }
 
@@ -3774,6 +3781,7 @@ h3.ca-project-hov-title a{
 }
 .video-play-section {
     margin-bottom: -290px;
+    background: black
 }
 .ca-counter-3 {
     z-index: 2;
@@ -5874,7 +5882,7 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     position: fixed;
     width: 40px;
     height: 40px;
-    background: #0E47A1;
+    background: #D11207;
     bottom: 40px;
     right: 50px;
     border-radius: 50px;
@@ -5882,7 +5890,7 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     text-decoration: none;
     text-align: center;
     line-height: 40px;
-    color:  #FFC107;
+    color:  white;
     border: none;
     cursor: pointer;
     display: none;
