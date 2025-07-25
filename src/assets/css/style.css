@@ -272,7 +272,7 @@ body, html {
     top: 0;
     height: 100%;
     width: 100%;
-    background: #1B0901;
+    background: #756c68;
     z-index: -1;
     transition: .3s;
     transform: scaleX(0);
@@ -1019,61 +1019,58 @@ header.header-area-3.stiky.scroll-header .header-3 {
 
 
 
-.ca-sec-primary-3 span {
-    background: #DCE6F7;
-}
-
 .ca-sec-primary-3 {
-    border: 1px solid #0E47A1;
+    background: #D11207;
     margin-left: 16px;
     transition: .3s;
     padding: 10px 16px;
     display: inline-block;
     font-weight: 700;
     position: relative;
+    z-index: 1;
+    border-radius: 50px;
+    color: #fff; /* Ensures text color consistency */
 }
-a.ca-sec-primary-3 span {
+
+.ca-sec-primary-3 span {
+    background: #7f0c0c;
     height: 32px;
     width: 32px;
     display: inline-block;
     font-size: 18px;
     line-height: 32px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 50%;
     margin-left: 6px;
+    transition: .3s;
 }
-.ca-sec-primary-3:after{
+
+/* Hover overlay effect similar to primary */
+.ca-sec-primary-3:after {
     position: absolute;
-    content:"";
-    left:0;
-    top:0;
-    height:100%;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    background: #0E47A1;
+    background: #756c68;
     z-index: -1;
     border-radius: 50px;
     transform: scaleX(0);
     transition: .3s;
 }
-.ca-sec-primary-3:hover{
-    color:#fff;
-    transition: .3s;
-}
-.ca-sec-primary-3 span {
-    transition: .3s;
-}
-.ca-sec-primary-3:hover span {
-    background: #2B5DAC;
-    transition: .3s;
-}
-.ca-sec-primary-3:hover:after{
-    transform: scale(1.1);
-    transition: .3s;
+
+.ca-sec-primary-3:hover:after {
+    transform: scaleX(1);
 }
 
+.ca-sec-primary-3:hover {
+    color: #fff;
+    transition: .3s;
+}
 
 .ca-btn-primary-3 span {
-    background: white;
+    background: #7f0c0c;
     height: 32px;
     width: 32px;
     display: inline-block;
