@@ -12,9 +12,8 @@ const Team = lazy(() => import("../app/(common)/pages/team/page"));
 const Testimonial = lazy(() => import("../app/(common)/pages/testimonial/page"));
 const Project = lazy(() => import("../app/(common)/projects/project/page"));
 const Services = lazy(() => import("../app/(common)/services/page"));
-const ServicesLeft = lazy(() => import("../app/(common)/services/left/page"));
-const ServiceRight = lazy(() => import("../app/(common)/services/right/page"));
 const ServiceSingle = lazy(() => import("../app/(common)/services/single/page"));
+const Apply = lazy(() => import("../app/(common)/apply/page"));
 
 export const landingRoutes = [{
   path: "/",
@@ -67,15 +66,11 @@ export const pageRoutes = [{
   name: "services",
   element: <Services />
 }, {
-  path: "/services/left",
-  name: "services-left",
-  element: <ServicesLeft />
-}, {
-  path: "/services/right",
-  name: "service-right",
-  element: <ServiceRight />
-}, {
   path: "/services/single",
   name: "service-single",
   element: <ServiceSingle />
+}, {
+  path: "/apply",
+  name: "apply",
+  element: <Apply />
 }];

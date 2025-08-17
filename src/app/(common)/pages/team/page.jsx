@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import share from "@/assets/img/icon/ca-share.svg";
 import breadCrumb from "@/assets/img/shape/breadcrumn-shape.png";
-import line from "@/assets/img/shape/ca-line-shape.png";
 import Paginations from "@/components/Paginations";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -13,11 +12,9 @@ const page = () => {
             <main>
                 <section className="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
                     <div className="ca-breadcrumb-shape p-absolute bre-sh-1">
-                        <Image src={breadCrumb} alt="" />
+                        <img src={breadCrumb} alt="" />
                     </div>
-                    <div className="ca-breadcrumb-shape p-absolute bre-sh-2">
-                        <Image src={line} alt="" />
-                    </div>
+
                     <div className="container">
                         <div className="ca-breadcrumb-content text-center">
                             <h2 className="ca-breadcrumb-title fnw-600">Our Teams</h2>

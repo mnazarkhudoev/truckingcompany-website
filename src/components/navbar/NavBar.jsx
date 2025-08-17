@@ -77,8 +77,8 @@ const NavBar = () => {
           </div>
           <div className="col-xl-3 col-lg col-md-6 col-6">
             <div className="ca-btn-header d-none d-lg-block text-end">
-              <Link to="/contact" className="ca-btn-primary-3 theme-bg-3 text-white br-50">
-                Get A Quote{" "}
+              <Link to="/apply" className="ca-btn-primary-3 theme-bg-3 text-white br-50">
+                Become a driver{" "}
                 <span>
                     <FaAngleRight />
                 </span>

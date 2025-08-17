@@ -1,5 +1,5 @@
 import breadCrumb from "@/assets/img/shape/breadcrumn-shape.png";
-import line from "@/assets/img/shape/ca-line-shape.png";
+import line from "@/assets/img/shape/";
 import Paginations from "@/components/Paginations";
 import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";

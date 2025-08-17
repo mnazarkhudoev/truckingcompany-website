@@ -4,7 +4,6 @@ import { faqData } from "./data";
 import thumb2 from "@/assets/img/faq/ca-faq-sm1.2.png";
 import thumb1 from "@/assets/img/faq/ca-faq-thumb-1.1.png";
 import breadCrumb from "@/assets/img/shape/breadcrumn-shape.png";
-import line from "@/assets/img/shape/ca-line-shape.png";
 import Counter from "./components/Counter";
 import PageMeta from "@/components/PageMeta";
 import { Link } from "react-router-dom";
@@ -17,9 +16,10 @@ const FAQPage = () => {
                 <div className="ca-breadcrumb-shape p-absolute bre-sh-1">
                     <img src={breadCrumb} alt="" />
                 </div>
-                <div className="ca-breadcrumb-shape p-absolute bre-sh-2">
+                {/* removed bre-sh-2 line shape */}
+                {/* <div className="ca-breadcrumb-shape p-absolute bre-sh-2">
                     <img src={line} alt="" />
-                </div>
+                </div> */}
                 <div className="container">
                     <div className="ca-breadcrumb-content text-center">
                         <h2 className="ca-breadcrumb-title fnw-600">FAQ’s</h2>
