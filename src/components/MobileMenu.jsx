@@ -12,7 +12,9 @@ const MobileMenu = ({
   const [serviceOpen, setServiceOpen] = useState(false);
   const [pagesOpen, setPagesOpen] = useState(false);
   const [projectOpen, setProjectOpen] = useState(false);
-  return <Offcanvas placement="end" show={show} onHide={handleClose} className="w-bg">
+  const anyOpen = homeOpen || serviceOpen || pagesOpen || projectOpen;
+  const closeAll = () => { setHomeOpen(false); setServiceOpen(false); setPagesOpen(false); setProjectOpen(false); };
+  return <Offcanvas placement="start" show={show} onHide={() => { closeAll(); handleClose(); }} className="w-bg" restoreFocus>
             <Offcanvas.Header closeButton>
                 <a href="#">
                     <img src={logo3} alt="Logo" />
@@ -20,6 +22,13 @@ const MobileMenu = ({
             </Offcanvas.Header>
 
             <Offcanvas.Body>
+                {anyOpen && (
+                    <div className="mb-3">
+                        <button className="ca-offcanvas-toogle" onClick={() => closeAll()} aria-label="Back to main menu">
+                            ← Back
+                        </button>
+                    </div>
+                )}
                 <div className="ca-offcanvas-menu-3 mb-40">
                     <nav>
                         <ul>
@@ -33,14 +42,14 @@ const MobileMenu = ({
                                 <Collapse in={homeOpen}>
                                     <ul>
                                         <li>
-                                            <Link to="/index-1">Home 01</Link>
+                                            <Link to="/index-1" onClick={handleClose}>Home 01</Link>
                                         </li>
                                     </ul>
                                 </Collapse>
                             </li>
 
                             <li>
-                                <Link to="/about">About Us</Link>
+                                <Link to="/about" onClick={handleClose}>About Us</Link>
                             </li>
 
                             <li>
@@ -53,16 +62,16 @@ const MobileMenu = ({
                                 <Collapse in={serviceOpen}>
                                     <ul>
                                         <li>
-                                            <Link to="/services">Service</Link>
+                                            <Link to="/services" onClick={handleClose}>Service</Link>
                                         </li>
                                         <li>
-                                            <Link to="/services/left">Service Left</Link>
+                                            <Link to="/services/left" onClick={handleClose}>Service Left</Link>
                                         </li>
                                         <li>
-                                            <Link to="/services/right">Service Right</Link>
+                                            <Link to="/services/right" onClick={handleClose}>Service Right</Link>
                                         </li>
                                         <li>
-                                            <Link to="/services/single">Service Single</Link>
+                                            <Link to="/services/single" onClick={handleClose}>Service Single</Link>
                                         </li>
                                     </ul>
                                 </Collapse>
@@ -78,22 +87,22 @@ const MobileMenu = ({
                                 <Collapse in={pagesOpen}>
                                     <ul>
                                         <li>
-                                            <Link to="/pages/team">Team</Link>
+                                            <Link to="/pages/team" onClick={handleClose}>Team</Link>
                                         </li>
                                         <li>
-                                            <Link to="/pages/testimonial">Testimonial</Link>
+                                            <Link to="/pages/testimonial" onClick={handleClose}>Testimonial</Link>
                                         </li>
                                         <li>
-                                            <Link to="/pages/faq">Faq</Link>
+                                            <Link to="/pages/faq" onClick={handleClose}>Faq</Link>
                                         </li>
                                         <li>
-                                            <Link to="/pages/pricing">Pricing Plan</Link>
+                                            <Link to="/pages/pricing" onClick={handleClose}>Pricing Plan</Link>
                                         </li>
                                         <li>
-                                            <Link to="/pages/contact">Contact Us</Link>
+                                            <Link to="/pages/contact" onClick={handleClose}>Contact Us</Link>
                                         </li>
                                         <li>
-                                            <Link to="/pages/404">404</Link>
+                                            <Link to="/pages/404" onClick={handleClose}>404</Link>
                                         </li>
                                     </ul>
                                 </Collapse>
@@ -109,16 +118,16 @@ const MobileMenu = ({
                                 <Collapse in={projectOpen}>
                                     <ul>
                                         <li>
-                                            <Link to="/projects">Project</Link>
+                                            <Link to="/projects" onClick={handleClose}>Project</Link>
                                         </li>
                                         <li>
-                                            <Link to="/projects/left">Project Left</Link>
+                                            <Link to="/projects/left" onClick={handleClose}>Project Left</Link>
                                         </li>
                                         <li>
-                                            <Link to="/projects/right">Project Right</Link>
+                                            <Link to="/projects/right" onClick={handleClose}>Project Right</Link>
                                         </li>
                                         <li>
-                                            <Link to="/projects/single">Project Single</Link>
+                                            <Link to="/projects/single" onClick={handleClose}>Project Single</Link>
                                         </li>
                                     </ul>
                                 </Collapse>
@@ -128,7 +137,7 @@ const MobileMenu = ({
                 </div>
 
                 <div className="ca-offcanvas-contact mb-40">
-                    <a href="#" className="ca-btn-primary-3 theme-bg-3 text-white br-50">
+                    <a href="#" className="ca-btn-primary-3 theme-bg-3 text-white br-50" onClick={handleClose}>
                         Get A Quote{" "}
                         <span>
                             <FaAngleRight />

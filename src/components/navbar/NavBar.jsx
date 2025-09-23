@@ -33,16 +33,40 @@ const NavBar = () => {
     };
   }, []);
   return <header ref={backToTop} className="header-area-3 stiky">
-      <div className="container header-3">
+      <div className="container-fluid header-3">
+        <div className="d-flex d-lg-none justify-content-between align-items-center py-2">
+          <div>
+            <button
+              type="button"
+              className="ca-offcanvas-toogle"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-controls="mobile-menu"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen(true)}
+              style={{ color: '#6c757d', borderColor: '#6c757d' }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+                <rect x="10" width="20" height="2" fill="currentColor"></rect>
+                <rect x="5" y="7" width="25" height="2" fill="currentColor"></rect>
+                <rect x="10" y="14" width="20" height="2" fill="currentColor"></rect>
+              </svg>
+            </button>
+          </div>
+          <div className="ca-logo">
+            <Link to="/index-1">
+              <img src={logo} alt="" />
+            </Link>
+          </div>
+        </div>
         <div className="row align-items-center">
-          <div className="col-xl-3 col-lg col-md-6 col-6">
-            <div className="ca-logo">
+          <div className="col-xl-3 col-lg col-md-6 col-6 order-2 order-lg-1 d-none d-lg-block">
+            <div className="ca-logo text-lg-start">
               <Link to="/index-1">
                 <img src={logo} alt="" />
               </Link>
             </div>
           </div>
-          <div className="col-xl-6 col-lg-7 d-none d-lg-block">
+          <div className="col-xl-6 col-lg-7 d-none d-lg-block order-lg-2">
             <div className="ca-main-menu-3">
               <nav className="ca-mobile-menu-active-3">
                 <ul>
@@ -75,7 +99,7 @@ const NavBar = () => {
               </nav>
             </div>
           </div>
-          <div className="col-xl-3 col-lg col-md-6 col-6">
+          <div className="col-xl-3 col-lg col-md-6 col-6 order-1 order-lg-3">
             <div className="ca-btn-header d-none d-lg-block text-end">
               <Link to="/apply" className="ca-btn-primary-3 theme-bg-3 text-white br-50">
                 Become a driver{" "}
@@ -84,19 +108,10 @@ const NavBar = () => {
                 </span>
               </Link>
             </div>
-            <div className="ca-header-action-item d-lg-none text-end">
-              <button type="button" className="ca-offcanvas-toogle" onClick={() => setIsMenuOpen(true)}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
-                  <rect x="10" width="20" height="2" fill="currentColor"></rect>
-                  <rect x="5" y="7" width="25" height="2" fill="currentColor"></rect>
-                  <rect x="10" y="14" width="20" height="2" fill="currentColor"></rect>
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
       </div>
-      <MobileMenu show={isMenuOpen} handleClose={() => setIsMenuOpen(!isMenuOpen)} />
+      <MobileMenu show={isMenuOpen} handleClose={() => setIsMenuOpen(false)} />
     </header>;
 };
 export default NavBar;
