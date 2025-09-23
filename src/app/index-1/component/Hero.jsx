@@ -9,28 +9,28 @@ import { FaAngleRight } from "react-icons/fa6";
 
 const heroSlides = [
 	{
-		subtitle: "Cargon-Transport & Logistics",
-		title: "Delivering Success Through Logistics And Expertise",
+		subtitle: "Iron Bull Trucking - Regional Excellence",
+		title: "Strength in Every Mile We Haul",
 		description:
-			"Whether it's international shipping, domestic transport, specialized logistics, our expertise ensures that every shipment is handled with precision and care.",
-		buttonLabel: "Get Started",
-		discoverLabel: "Discover More",
-	},
-	{
-		subtitle: "Cargon-Global Logistics",
-		title: "Optimizing Your Supply Chain Worldwide",
-		description:
-			"We connect businesses globally, offering seamless logistics solutions that drive efficiency and growth across international markets.",
-		buttonLabel: "Explore Services",
-		discoverLabel: "Learn More",
-	},
-	{
-		subtitle: "Cargon-Reliable Transport",
-		title: "Your Trusted Partner in Timely Deliveries",
-		description:
-			"From local deliveries to complex project logistics, we ensure your goods arrive on time, every time, with our dedicated team and advanced technology.",
+			"From local deliveries to regional freight, our dedicated team ensures your cargo arrives safely and on time with the reliability you can count on.",
 		buttonLabel: "Contact Us",
-		discoverLabel: "View Solutions",
+		discoverLabel: "Our Services",
+	},
+	{
+		subtitle: "Iron Bull Trucking - Built Tough",
+		title: "Your Cargo, Our Commitment",
+		description:
+			"We understand that your freight is your business. That's why we treat every load with the care and attention it deserves, backed by our iron-clad reliability.",
+		buttonLabel: "Contact Us",
+		discoverLabel: "Our Services",
+	},
+	{
+		subtitle: "Iron Bull Trucking - Trusted Service",
+		title: "Small Enough to Care, Strong Enough to Deliver",
+		description:
+			"As a growing trucking company, we offer personalized service with the strength and determination to handle your freight needs reliably.",
+		buttonLabel: "Contact Us",
+		discoverLabel: "Our Services",
 	},
 ];
 
@@ -103,7 +103,7 @@ const Hero = () => {
 											</span>
 										</Link>
 										<Link
-											to="/contact"
+											to="/services"
 											className="ca-sec-primary-3 theme-color-3 br-50"
 										>
 											{slide.discoverLabel}

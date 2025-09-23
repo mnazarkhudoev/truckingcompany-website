@@ -998,7 +998,7 @@ header.header-area-3.stiky.scroll-header .header-3 {
     padding: 15px;
 }
 
-.header-area-3.stiky.scroll-header{
+.header-area-3.stiky.scroll-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -1009,15 +1009,17 @@ header.header-area-3.stiky.scroll-header .header-3 {
     visibility: visible;
     background-color: #000000;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
-    -khtml-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
-    -moz-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
-    -ms-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
-    -o-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
-    animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
+    animation: headerSlideDown 0.95s ease forwards;
 }
 
-
+@keyframes headerSlideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .ca-sec-primary-3 {
     background: #D11207;
@@ -1029,7 +1031,7 @@ header.header-area-3.stiky.scroll-header .header-3 {
     position: relative;
     z-index: 1;
     border-radius: 50px;
-    color: #fff; /* Ensures text color consistency */
+    color: #fff;
 }
 
 .ca-sec-primary-3 span {
@@ -1045,7 +1047,6 @@ header.header-area-3.stiky.scroll-header .header-3 {
     transition: .3s;
 }
 
-/* Hover overlay effect similar to primary */
 .ca-sec-primary-3:after {
     position: absolute;
     content: "";
@@ -1080,6 +1081,7 @@ header.header-area-3.stiky.scroll-header .header-3 {
     margin-left: 6px;
     transition: .3s;
 }
+
 .ca-btn-primary-3 span i {
     font-size: 20px;
     line-height: 20px;
@@ -1095,7 +1097,6 @@ header.header-area-3.stiky.scroll-header .header-3 {
     transition: .3s;
 }
 
-/* section title 3 */
 .subtitle-bg-6:after {
     position: absolute;
     content: "";
@@ -1105,12 +1106,12 @@ header.header-area-3.stiky.scroll-header .header-3 {
     top: 9px;
     left: 12px;
 }
+
 .ca-sec-content-3 p {
     color: white;
     font-size: 16px;
     line-height: 24px;
 }
-
 
 
 /* ============================================
@@ -4995,7 +4996,7 @@ textarea{
 .ca-location-icbox {
     display: flex;
     align-items: center;
-    background: #b7b7b7;
+    background: #141414;
     padding: 24px;
     border-radius: 7px;
     overflow: hidden;
@@ -5137,6 +5138,7 @@ iframe.ca-map {
 }
 .ca-contact-title-2{
     font-size: 24px;
+    color: #fff;
     line-height: 24px;
 }
 .ca-contact-content-2 p{
@@ -5867,7 +5869,7 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     transition: .3s;
 }
 .ca-footer-social-3 ul li a:hover{
-    background: #fae900;
+    background: #6b6969;
     color: #fff;
     transition: .3s;
 }
@@ -7431,9 +7433,10 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     border:0px !important;
 }
 .ca-logo img {
-    max-height: 140px;   /* or whatever fits your navbar */
+    max-height: 140px;
     width: auto;
     height: auto;
     display: block;
     margin-top: -30px;
+    transition: all 0.3s ease;
 }

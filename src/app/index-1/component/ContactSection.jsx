@@ -64,7 +64,7 @@ const ContactSection = () => {
                                 <h4 className="ca-contact-title-2 theme-black-2 fnw-600">
                                     Send Us A Message
                                 </h4>
-                                <p className="pt-16 pb-24">
+                                <p className="pt-16 pb-24 text-white">
                                     As a fellow small business owner, we know the fulfillment that
                                     an a best to comes from running & own business contact our
                                     service to Cargon.
