@@ -103,7 +103,7 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <div className="ca-maps" style={{ backgroundColor: '#000000', padding: '0 0 50px 0' }}>
+        <div className="ca-maps" style={{ backgroundColor: '#000000', padding: '0 0 0 0' }}>
           <div className="container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.289506974609!2d-71.43637068455596!3d41.922934379218084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44c5e8b7d5b45%3A0x8f8a8f8a8f8a8f8a!2s25%20Crow%20Point%20Rd%2C%20Lincoln%2C%20RI%2002865%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
@@ -111,7 +111,7 @@ const ContactPage = () => {
               style={{
                 border: '0',
                 width: '100%',
-                height: '450px',
+                height: '550px',
                 borderRadius: '10px',
                 filter: 'invert(1) hue-rotate(180deg) contrast(0.85)'
               }}
@@ -123,7 +123,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <section className="ca-conatct-form1 pb-100" style={{ backgroundColor: '#000000' }}>
+        <section className="ca-conatct-form1 pb-100" style={{ backgroundColor: '#000000', marginTop: '40px' }}>
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-8 col-lg-10">
