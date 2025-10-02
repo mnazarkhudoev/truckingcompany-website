@@ -26,6 +26,11 @@ const NavBar = () => {
           top: 0, 
           behavior: 'smooth' 
         });
+      } else if (link === '#bottom') {
+        window.scrollTo({ 
+          top: document.body.scrollHeight, 
+          behavior: 'smooth' 
+        });
       } else {
         const element = document.querySelector(link);
         if (element) {

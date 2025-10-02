@@ -7,6 +7,10 @@ import PageMeta from "@/components/PageMeta";
 const page = () => {
   return <>
             <PageMeta title="Services" />
+            <style>{`
+              /* Make CTA shape static on Services page */
+              .ca-cta-shape3 { animation: none !important; transform: translateY(0) !important; }
+            `}</style>
         <main>
             <section className="ca-breadcrumb-area cream-bg-3 p-relative z-index-1 fix">
                 <div className="ca-breadcrumb-shape p-absolute bre-sh-1">

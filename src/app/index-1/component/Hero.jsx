@@ -10,11 +10,11 @@ import { FaAngleRight } from "react-icons/fa6";
 const heroSlides = [
 	{
 		subtitle: "Iron Bull Trucking - Regional Excellence",
-		title: "Strength in Every Mile We Haul",
+		title: "Professionilsm in Every Delivery",
 		description:
 			"From local deliveries to regional freight, our dedicated team ensures your cargo arrives safely and on time with the reliability you can count on.",
 		buttonLabel: "Contact Us",
-		discoverLabel: "Our Services",
+		discoverLabel: "Become a Driver",
 	},
 	{
 		subtitle: "Iron Bull Trucking - Built Tough",
@@ -22,7 +22,7 @@ const heroSlides = [
 		description:
 			"We understand that your freight is your business. That's why we treat every load with the care and attention it deserves, backed by our iron-clad reliability.",
 		buttonLabel: "Contact Us",
-		discoverLabel: "Our Services",
+		discoverLabel: "Become a Driver",
 	},
 	{
 		subtitle: "Iron Bull Trucking - Trusted Service",
@@ -30,7 +30,7 @@ const heroSlides = [
 		description:
 			"As a growing trucking company, we offer personalized service with the strength and determination to handle your freight needs reliably.",
 		buttonLabel: "Contact Us",
-		discoverLabel: "Our Services",
+		discoverLabel: "Become a Driver",
 	},
 ];
 
@@ -92,7 +92,7 @@ const Hero = () => {
 										{slide.title}
 									</h1>
 									<p className="pt-16 pb-32">{slide.description}</p>
-									<div className="hero3-btn">
+									<div className="hero3-btn d-flex flex-wrap align-items-center">
 										<Link
 											to="/contact"
 											className="ca-btn-primary-3 theme-bg-3 text-white br-50"
@@ -103,11 +103,26 @@ const Hero = () => {
 											</span>
 										</Link>
 										<Link
-											to="/services"
-											className="ca-sec-primary-3 theme-color-3 br-50"
+											to="/apply"
+											className="ca-sec-primary-3 theme-color-3 br-50 d-inline-block d-lg-none"
+											style={{
+												padding: '10px 10px',
+												fontSize: '11px',
+												marginLeft: '8px',
+												marginTop: '0px',
+												lineHeight: '16px',
+												maxWidth: '200px',
+												textAlign: 'center',
+											}}
 										>
-											{slide.discoverLabel}
-											<span>
+											Apply Now
+											<span style={{
+												height: '20px',
+												width: '20px',
+												lineHeight: '20px',
+												fontSize: '10px',
+												marginLeft: '4px'
+											}}>
 												<FaAngleRight />
 											</span>
 										</Link>

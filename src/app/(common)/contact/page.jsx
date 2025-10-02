@@ -38,6 +38,10 @@ const ContactPage = () => {
   return (
     <>
       <PageMeta title="Contact" />
+      <style>{`
+        /* Make CTA shape static on Contact page */
+        .ca-cta-shape3 { animation: none !important; transform: translateY(0) !important; }
+      `}</style>
       <main style={{ backgroundColor: '#000000', minHeight: '100vh' }}>
         <section className="ca-breadcrumb-area p-relative z-index-1 fix" style={{ backgroundColor: '#000000', paddingTop: '80px', paddingBottom: '40px' }}>
           <div className="ca-breadcrumb-shape p-absolute bre-sh-1">

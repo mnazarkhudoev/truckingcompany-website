@@ -43,31 +43,31 @@ const ContactSection = () => {
       [name]: value
     });
   };
-  return <section className="contact-3-area theme-black-bg-3 pt-100 pb-70">
+  return <section id="contact" className="contact-3-area theme-black-bg-3 pt-100 pb-70" style={{margin: 0, backgroundColor: '#000000'}}>
             <Container>
-                <div className="ca-blog-content-3 ca-sec-content-3 text-center mb-60">
-                    <h5 className="ca-section-subtitle subtitle-bg-7 p-relative theme-color-3 br-50">
-                        Contact Us
+                <div className="ca-contact-content-3 ca-sec-content-3 text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
+                    <h5 className="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">
+                        Get In Touch
                     </h5>
-                    <h2 className="ca-section-title text-white fnw-600 pt-16 ca-text-cap">
-                        Get In Touch With Us
+                    <h2 className="ca-section-title theme-color-3 fnw-600 pt-16">
+                        Contact Iron Bull Trucking
                     </h2>
                     <p className="pt-16 text-white">
                         Ready to partner with Iron Bull Trucking? Contact us today to discuss
+                        <br />
                         your transportation needs and get a customized quote.
                     </p>
                 </div>
                 <Row className="align-items-center">
                     <Col xl={6} className="mb-30">
-                        <div className="ca-contact-from w-bg ca-contact-from-3">
+                        <div className="ca-contact-from ca-contact-from-3" style={{backgroundColor: '#141414', padding: '30px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)'}}>
                             <div className="ca-contact-content-3">
-                                <h4 className="ca-contact-title-2 theme-black-2 fnw-600">
+                                <h4 className="ca-contact-title-2 text-white fnw-600">
                                     Send Us A Message
                                 </h4>
                                 <p className="pt-16 pb-24 text-white">
-                                    As a fellow small business owner, we know the fulfillment that
-                                    an a best to comes from running & own business contact our
-                                    service to Cargon.
+                                    Ready to get started? Fill out the form below and we'll get back to you 
+                                    within 24 hours to discuss your transportation needs.
                                 </p>
                             </div>
                             <Form>
@@ -112,53 +112,54 @@ const ContactSection = () => {
                         </div>
                     </Col>
                     <Col xl={6} className="mb-30">
-                        <div className="ca-form-loca-3 ml-50">
+                        <div className="ca-form-loca-3" style={{backgroundColor: '#141414', padding: '30px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)'}}>
+                            <h3 className="text-white mb-20 fnw-600">Contact Information</h3>
                             <div className="ca-location-3 mb-20">
-                                <div className="ca-location-icbox">
+                                <div className="ca-location-icbox" style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
                                     <div className="ca-location-icbox-img">
                                         <span>
-                                            <img src={location} alt="Location Icon" />
+                                            <img src={location} alt="Location Icon" style={{filter: 'brightness(0) invert(1)', width: '24px', height: '24px'}} />
                                         </span>
                                     </div>
                                     <div className="ca-location-icbox-text">
-                                        <h4 className="ca-title fnw-600 theme-black-3 pb-12">
-                                            Contact Us
+                                        <h4 className="ca-title fnw-600 text-white pb-12">
+                                            Our Address
                                         </h4>
-                                        <p>
-                                            {contactInfo.address} <br /> {contactInfo.email}
+                                        <p className="text-white" style={{margin: 0}}>
+                                            {contactInfo.address}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="ca-location-3 mb-20">
-                                <div className="ca-location-icbox">
+                                <div className="ca-location-icbox" style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
                                     <div className="ca-location-icbox-img">
                                         <span>
-                                            <img src={phone} alt="Phone Icon" />
+                                            <img src={phone} alt="Phone Icon" style={{filter: 'brightness(0) invert(1)', width: '24px', height: '24px'}} />
                                         </span>
                                     </div>
                                     <div className="ca-location-icbox-text">
-                                        <h4 className="ca-title fnw-600 theme-black-3 pb-12">
+                                        <h4 className="ca-title fnw-600 text-white pb-12">
                                             Call or Text
                                         </h4>
-                                        <Link to={`tel:${contactInfo.phone}`}>
+                                        <Link to={`tel:${contactInfo.phone}`} style={{color: '#f12d21', textDecoration: 'none'}}>
                                             {contactInfo.phone}
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                             <div className="ca-location-3 mb-20">
-                                <div className="ca-location-icbox">
+                                <div className="ca-location-icbox" style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
                                     <div className="ca-location-icbox-img">
                                         <span>
-                                            <img src={email} alt="Email Icon" />
+                                            <img src={email} alt="Email Icon" style={{filter: 'brightness(0) invert(1)', width: '24px', height: '24px'}} />
                                         </span>
                                     </div>
                                     <div className="ca-location-icbox-text">
-                                        <h4 className="ca-title fnw-600 theme-black-3 pb-12">
+                                        <h4 className="ca-title fnw-600 text-white pb-12">
                                             Send Email
                                         </h4>
-                                        <Link to={`mailto:${contactInfo.email}`}>
+                                        <Link to={`mailto:${contactInfo.email}`} style={{color: '#f12d21', textDecoration: 'none'}}>
                                             {contactInfo.email}
                                         </Link>
                                     </div>

@@ -9,9 +9,8 @@ const MobileMenu = ({
   handleClose
 }) => {
   const [pagesOpen, setPagesOpen] = useState(false);
-  const [projectOpen, setProjectOpen] = useState(false);
-  const anyOpen = pagesOpen || projectOpen;
-  const closeAll = () => { setPagesOpen(false); setProjectOpen(false); };
+  const anyOpen = pagesOpen;
+  const closeAll = () => { setPagesOpen(false); };
   return <Offcanvas placement="start" show={show} onHide={() => { closeAll(); handleClose(); }} className="w-bg" restoreFocus>
             <Offcanvas.Header closeButton>
                 <a href="#">
@@ -84,59 +83,28 @@ const MobileMenu = ({
                             </li>
 
                             <li>
-                                <a href="#" onClick={() => setPagesOpen(!pagesOpen)}>
-                                    Pages
-                                </a>
-                                <button className="ca-menu-close2" onClick={() => setPagesOpen(!pagesOpen)}>
-                                    {pagesOpen ? <FaAngleDown /> : <FaAngleRight />}
-                                </button>
-                                <Collapse in={pagesOpen}>
-                                    <ul>
-                                        <li>
-                                            <Link to="/pages/team" onClick={handleClose}>Team</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/pages/testimonial" onClick={handleClose}>Testimonial</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/pages/faq" onClick={handleClose}>Faq</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/pages/pricing" onClick={handleClose}>Pricing Plan</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/pages/contact" onClick={handleClose}>Contact Us</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/pages/404" onClick={handleClose}>404</Link>
-                                        </li>
-                                    </ul>
-                                </Collapse>
+                                <a href="#contact" onClick={(e) => {
+                                  e.preventDefault();
+                                  const element = document.querySelector('#contact');
+                                  if (element) {
+                                    element.scrollIntoView({ 
+                                      behavior: 'smooth',
+                                      block: 'start'
+                                    });
+                                  }
+                                  handleClose();
+                                }}>Contact Us</a>
                             </li>
 
                             <li>
-                                <a href="#" onClick={() => setProjectOpen(!projectOpen)}>
-                                    Projects
-                                </a>
-                                <button className="ca-menu-close2" onClick={() => setProjectOpen(!projectOpen)}>
-                                    {projectOpen ? <FaAngleDown /> : <FaAngleRight />}
-                                </button>
-                                <Collapse in={projectOpen}>
-                                    <ul>
-                                        <li>
-                                            <Link to="/projects" onClick={handleClose}>Project</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/projects/left" onClick={handleClose}>Project Left</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/projects/right" onClick={handleClose}>Project Right</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/projects/single" onClick={handleClose}>Project Single</Link>
-                                        </li>
-                                    </ul>
-                                </Collapse>
+                                <a href="#bottom" onClick={(e) => {
+                                  e.preventDefault();
+                                  window.scrollTo({ 
+                                    top: document.body.scrollHeight, 
+                                    behavior: 'smooth' 
+                                  });
+                                  handleClose();
+                                }}>Quick Links</a>
                             </li>
                         </ul>
                     </nav>

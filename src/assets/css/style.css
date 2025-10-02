@@ -5589,6 +5589,12 @@ iframe.ca-map {
     top: 0;
     animation: move 7s linear infinite;
 }
+
+/* Static version of CTA shape for specific pages */
+.ca-cta-shape3.static {
+    animation: none;
+    transform: translateY(0);
+}
 .ca-btn-cta-3:hover .ca-btn-primary{
     color: #fff;
 }

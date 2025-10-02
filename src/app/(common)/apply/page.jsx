@@ -104,6 +104,9 @@ const Apply = () => {
         .apply-dark textarea.form-control { min-height:140px; }
         .apply-dark .btn-disabled { opacity: 0.6; cursor: not-allowed; }
         .apply-dark .form-label .required { color: #ef4444; }
+        
+        /* Make CTA shape static on Apply page */
+        .ca-cta-shape3 { animation: none !important; transform: translateY(0) !important; }
       `}</style>
 
       <div className="apply-page">
