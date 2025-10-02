@@ -43,18 +43,18 @@ const ContactSection = () => {
       [name]: value
     });
   };
-  return <section className="contact-3-area cream-bg-3 pt-100 pb-70">
+  return <section className="contact-3-area theme-black-bg-3 pt-100 pb-70">
             <Container>
                 <div className="ca-blog-content-3 ca-sec-content-3 text-center mb-60">
-                    <h5 className="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">
+                    <h5 className="ca-section-subtitle subtitle-bg-7 p-relative theme-color-3 br-50">
                         Contact Us
                     </h5>
-                    <h2 className="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap">
-                        Trusted by Industry Leaders
+                    <h2 className="ca-section-title text-white fnw-600 pt-16 ca-text-cap">
+                        Get In Touch With Us
                     </h2>
-                    <p className="pt-16">
-                        Gain insights into effective warehouse management strategies that
-                        maximize space, improve accuracy, and boost productivity.
+                    <p className="pt-16 text-white">
+                        Ready to partner with Iron Bull Trucking? Contact us today to discuss
+                        your transportation needs and get a customized quote.
                     </p>
                 </div>
                 <Row className="align-items-center">

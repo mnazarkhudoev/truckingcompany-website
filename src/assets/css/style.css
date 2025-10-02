@@ -7343,6 +7343,82 @@ button.ca-btn-primary.ca-btn-primary-2 span {
 .ctn-preloader .loader.dark_bg .loader-section .bg {
 	background: #111339;
 }
+
+/* Custom logo loading styles */
+.ctn-preloader .animation-preloader .logo-loading {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.ctn-preloader .animation-preloader .loading-logo {
+	max-width: 200px;
+	height: auto;
+	animation: logoFade 2s ease-in-out infinite alternate;
+}
+
+.ctn-preloader .animation-preloader .loading-text {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.ctn-preloader .animation-preloader .loading-text span {
+	font: bold 1.5em "Outfit", sans-serif;
+	color: #fff;
+	animation: textPulse 1.5s ease-in-out infinite;
+}
+
+.ctn-preloader.dark .loader-section .bg {
+	background-color: #000000;
+}
+
+@keyframes logoFade {
+	0% { opacity: 0.7; transform: scale(0.95); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textPulse {
+	0%, 100% { opacity: 0.6; }
+	50% { opacity: 1; }
+}
+
+/* Bonuses Section Styles */
+.ca-bonuses-section {
+    background-color: #000000;
+}
+
+.ca-bonuses-item {
+    background: #141414;
+    padding: 30px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ca-bonuses-item:hover {
+    background: #1a1a1a;
+    transform: translateY(-5px);
+}
+
+.ca-bonuses-title {
+    color: #fff !important;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ca-bonuses-icon {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ca-bonuses-cta h3 {
+    font-size: 24px;
+}
+
+.ca-bonuses-cta p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 .ctn-preloader.loaded .animation-preloader {
 	opacity: 0;
 	-webkit-transition: 0.3s ease-out;
@@ -7439,4 +7515,171 @@ button.ca-btn-primary.ca-btn-primary-2 span {
     display: block;
     margin-top: -30px;
     transition: all 0.3s ease;
+}
+
+/* Requirements Section Styles */
+.ca-requirements-section {
+    background-color: #000000;
+}
+
+.ca-requirements-item {
+    background: #141414;
+    padding: 25px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ca-requirements-item:hover {
+    background: #1a1a1a;
+    transform: translateY(-5px);
+}
+
+.ca-requirements-title {
+    color: #fff !important;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ca-requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ca-requirements-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.ca-requirements-list li:last-child {
+    border-bottom: none;
+}
+
+.ca-requirements-list .theme-color-3 {
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.ca-requirements-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ca-requirements-intro h3 {
+    font-size: 24px;
+}
+
+.ca-requirements-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* About Us Section Styles */
+.ca-about-section {
+    background-color: #000000;
+}
+
+.ca-about-item {
+    background: #141414;
+    padding: 25px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ca-about-item:hover {
+    background: #1a1a1a;
+    transform: translateY(-5px);
+}
+
+.ca-about-title {
+    color: #fff !important;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ca-about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ca-about-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.ca-about-list li:last-child {
+    border-bottom: none;
+}
+
+.ca-about-list .theme-color-3 {
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.ca-about-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ca-about-intro h3,
+.ca-about-intro h4 {
+    font-size: 24px;
+}
+
+.ca-about-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ca-about-icon {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fix white gaps between sections */
+body {
+    background-color: #000000 !important;
+}
+
+main {
+    background-color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure all sections have no gaps */
+section {
+    margin: 0 !important;
+    display: block;
+}
+
+/* Fix any potential container issues */
+.container,
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure hero section covers full width */
+.ca-slider-active-3 {
+    margin: 0 !important;
+}
+
+.ca-slider-3 {
+    margin: 0 !important;
 }

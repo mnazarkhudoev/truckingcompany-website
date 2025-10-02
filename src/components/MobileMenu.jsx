@@ -8,12 +8,10 @@ const MobileMenu = ({
   show,
   handleClose
 }) => {
-  const [homeOpen, setHomeOpen] = useState(false);
-  const [serviceOpen, setServiceOpen] = useState(false);
   const [pagesOpen, setPagesOpen] = useState(false);
   const [projectOpen, setProjectOpen] = useState(false);
-  const anyOpen = homeOpen || serviceOpen || pagesOpen || projectOpen;
-  const closeAll = () => { setHomeOpen(false); setServiceOpen(false); setPagesOpen(false); setProjectOpen(false); };
+  const anyOpen = pagesOpen || projectOpen;
+  const closeAll = () => { setPagesOpen(false); setProjectOpen(false); };
   return <Offcanvas placement="start" show={show} onHide={() => { closeAll(); handleClose(); }} className="w-bg" restoreFocus>
             <Offcanvas.Header closeButton>
                 <a href="#">
@@ -33,48 +31,56 @@ const MobileMenu = ({
                     <nav>
                         <ul>
                             <li>
-                                <a href="#" onClick={() => setHomeOpen(!homeOpen)}>
-                                    Home
-                                </a>
-                                <button className="ca-menu-close2" onClick={() => setHomeOpen(!homeOpen)}>
-                                    {homeOpen ? <FaAngleDown /> : <FaAngleRight />}
-                                </button>
-                                <Collapse in={homeOpen}>
-                                    <ul>
-                                        <li>
-                                            <Link to="/index-1" onClick={handleClose}>Home 01</Link>
-                                        </li>
-                                    </ul>
-                                </Collapse>
+                                <a href="#top" onClick={(e) => {
+                                  e.preventDefault();
+                                  window.scrollTo({ 
+                                    top: 0, 
+                                    behavior: 'smooth' 
+                                  });
+                                  handleClose();
+                                }}>Home</a>
                             </li>
 
                             <li>
-                                <Link to="/about" onClick={handleClose}>About Us</Link>
+                                <a href="#about" onClick={(e) => {
+                                  e.preventDefault();
+                                  const element = document.querySelector('#about');
+                                  if (element) {
+                                    element.scrollIntoView({ 
+                                      behavior: 'smooth',
+                                      block: 'start'
+                                    });
+                                  }
+                                  handleClose();
+                                }}>About Us</a>
                             </li>
 
                             <li>
-                                <a href="#" onClick={() => setServiceOpen(!serviceOpen)}>
-                                    Service
-                                </a>
-                                <button className="ca-menu-close2" onClick={() => setServiceOpen(!serviceOpen)}>
-                                    {serviceOpen ? <FaAngleDown /> : <FaAngleRight />}
-                                </button>
-                                <Collapse in={serviceOpen}>
-                                    <ul>
-                                        <li>
-                                            <Link to="/services" onClick={handleClose}>Service</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/services/left" onClick={handleClose}>Service Left</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/services/right" onClick={handleClose}>Service Right</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/services/single" onClick={handleClose}>Service Single</Link>
-                                        </li>
-                                    </ul>
-                                </Collapse>
+                                <a href="#requirements" onClick={(e) => {
+                                  e.preventDefault();
+                                  const element = document.querySelector('#requirements');
+                                  if (element) {
+                                    element.scrollIntoView({ 
+                                      behavior: 'smooth',
+                                      block: 'start'
+                                    });
+                                  }
+                                  handleClose();
+                                }}>Requirements</a>
+                            </li>
+
+                            <li>
+                                <a href="#bonuses" onClick={(e) => {
+                                  e.preventDefault();
+                                  const element = document.querySelector('#bonuses');
+                                  if (element) {
+                                    element.scrollIntoView({ 
+                                      behavior: 'smooth',
+                                      block: 'start'
+                                    });
+                                  }
+                                  handleClose();
+                                }}>Bonuses</a>
                             </li>
 
                             <li>
@@ -110,7 +116,7 @@ const MobileMenu = ({
 
                             <li>
                                 <a href="#" onClick={() => setProjectOpen(!projectOpen)}>
-                                    Project
+                                    Projects
                                 </a>
                                 <button className="ca-menu-close2" onClick={() => setProjectOpen(!projectOpen)}>
                                     {projectOpen ? <FaAngleDown /> : <FaAngleRight />}

@@ -1,15 +1,15 @@
 export const navItems = [
   {
     label: "Home",
-    link: "/index-1"
+    link: "#top"
   },
   {
     label: "About Us",
-    link: "/about"
+    link: "#about"
   },
   {
-    label: "Services",
-    link: "/services/single"
+    label: "Requirements",
+    link: "#requirements"
   },
   {
     label: "Pages",
@@ -42,29 +42,11 @@ export const navItems = [
     ]
   },
   {
-    label: "Requirements",
-    link: "#",
-    submenu: [
-      {
-        label: "Blog",
-        link: "/blog"
-      },
-      {
-        label: "Blog Left",
-        link: "/blog/left"
-      },
-      {
-        label: "Blog Right",
-        link: "/blog/right"
-      },
-      {
-        label: "Blog Single",
-        link: "/blog/single"
-      }
-    ]
+    label: "Bonuses",
+    link: "#bonuses"
   },
   {
-    label: "Bonuses",
+    label: "Projects",
     link: "#",
     submenu: [
       {

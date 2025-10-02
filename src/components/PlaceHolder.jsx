@@ -1,15 +1,15 @@
+import logo from "@/assets/img/logo/ca-logo3.1.png";
+
 const PlaceHolder = () => {
   return <div id="preloader">
-            <div id="ctn-preloader" className="ctn-preloader">
+            <div id="ctn-preloader" className="ctn-preloader dark">
                 <div className="animation-preloader">
+                    <div className="logo-loading">
+                        <img src={logo} alt="Iron Bull Trucking" className="loading-logo" />
+                    </div>
                     <div className="spinner"></div>
-                    <div className="txt-loading">
-                        <span data-text-preloader="C" className="letters-loading">C</span>
-                        <span data-text-preloader="A" className="letters-loading">A</span>
-                        <span data-text-preloader="R" className="letters-loading">R</span>
-                        <span data-text-preloader="G" className="letters-loading">G</span>
-                        <span data-text-preloader="O" className="letters-loading">O</span>
-                        <span data-text-preloader="N" className="letters-loading">N</span>
+                    <div className="loading-text">
+                        <span>Loading...</span>
                     </div>
                 </div>
                 <div className="loader">

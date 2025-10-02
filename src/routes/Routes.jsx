@@ -2,7 +2,6 @@ import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
 const Index1 = lazy(() => import("../app/index-1/page"));
-const About = lazy(() => import("../app/(common)/about/page"));
 const Contact = lazy(() => import("../app/(common)/contact/page"));
 const Blog = lazy(() => import("../app/(common)/blog/page"));
 const ErrorPage = lazy(() => import("../app/(common)/pages/404/page"));
@@ -26,10 +25,6 @@ export const landingRoutes = [{
 }];
 
 export const pageRoutes = [{
-  path: "/about",
-  name: "about",
-  element: <About />
-}, {
   path: "/contact",
   name: "contact",
   element: <Contact />

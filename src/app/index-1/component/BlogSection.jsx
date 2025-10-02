@@ -35,23 +35,23 @@ const BlogSection = () => {
     description: "Learn practical strategies for optimizing your supply chain operations, improve delivery.",
     link: "/blog-single"
   }];
-  return <section className="ca-blog pt-100 pb-70">
+  return <section className="ca-blog theme-black-bg-3 pt-100 pb-70">
       <Container>
         <div className="ca-blog-content-3 ca-sec-content-3 text-center mb-60">
-          <h5 className="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">
+          <h5 className="ca-section-subtitle subtitle-bg-7 p-relative theme-color-3 br-50">
             Our Blog
           </h5>
-          <h2 className="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap">
-            Best Practices and Strategies
+          <h2 className="ca-section-title text-white fnw-600 pt-16 ca-text-cap">
+            Industry Insights & Updates
           </h2>
-          <p className="pt-16">
-            Gain insights into effective warehouse management strategies that{" "}
-            <br /> maximize space, improve accuracy, and boost productivity.
+          <p className="pt-16 text-white">
+            Stay informed with the latest trucking industry news, best practices,
+            <br /> and insights from our experienced team of professionals.
           </p>
         </div>
         <Row>
           {blog.map(post => <Col key={post.id} xl={4} md={6} className="mb-30">
-              <div className="ca-team-box ca-blog-box-3 cream-bg-3 br-7 fix p-relative z-index-1">
+              <div className="ca-team-box ca-blog-box-3 br-7 fix p-relative z-index-1" style={{background: '#141414', border: '1px solid rgba(255, 255, 255, 0.1)'}}>
                 <div className="ca-team-img">
                   <Link to={post.link}>
                     <img src={post.image} alt={post.title} width={400} height={250} />

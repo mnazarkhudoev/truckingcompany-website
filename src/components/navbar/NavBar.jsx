@@ -17,6 +17,27 @@ const NavBar = () => {
     setIsMenuOpen(false);
     setOpenDropdown(null);
   };
+
+  const handleLinkClick = (e, link) => {
+    if (link.startsWith('#')) {
+      e.preventDefault();
+      if (link === '#top') {
+        window.scrollTo({ 
+          top: 0, 
+          behavior: 'smooth' 
+        });
+      } else {
+        const element = document.querySelector(link);
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+      setOpenDropdown(null);
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (backToTop.current) {
@@ -77,6 +98,8 @@ const NavBar = () => {
                     if (item.submenu) {
                       e.preventDefault();
                       toggleDropdown(index);
+                    } else {
+                      handleLinkClick(e, item.link);
                     }
                   }}>
                         {item.label}

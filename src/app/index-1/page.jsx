@@ -3,11 +3,12 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/navbar/BackToTop";
 import NavBar from "@/components/navbar/NavBar";
 import PageMeta from "@/components/PageMeta";
+import AboutUs from "./component/AboutUs";
 import BlogSection from "./component/BlogSection";
-import Commitment from "./component/Commitment";
+import Bonuses from "./component/Bonuses";
 import ContactSection from "./component/ContactSection";
 import Portfolio from "./component/Portfolio";
-import Service from "./component/Service";
+import Requirements from "./component/Requirements";
 import TestimonialSection from "./component/TestimonialSection";
 import VideoPlaySection from "./component/VideoPlaySection";
 import WorkingProcessSection from "./component/WorkingProcessSection";
@@ -17,8 +18,9 @@ const Page = () => {
             <NavBar />
             <main>
                 <Hero />
-                <Commitment />
-                <Service />
+                <AboutUs />
+                <Requirements />
+                <Bonuses />
                 <Portfolio />
                 <VideoPlaySection />
                 <WorkingProcessSection />
