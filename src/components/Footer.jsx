@@ -20,14 +20,6 @@ const footerData = {
     { text: "Latest News", url: "/blog" },
     { text: "Contact Us", url: "/contact" }
   ],
-  otherLinks: [
-    { text: "Maintenance", url: "#" },
-    { text: "Our Team", url: "#" },
-    { text: "Reviews & Awards", url: "#" },
-    { text: "Personal", url: "#" },
-    { text: "Certifications", url: "#" }
-  ],
-  subscriptionText: "Subscribe us & receive our latest news & articles",
   copyrightText: "Copyright © 2025 Iron Bull. All Rights Reserved",
   legalLinks: [
     { text: "Terms & Conditions", url: "#" },
@@ -66,13 +58,13 @@ const Footer = () => {
                   to="/contact"
                   className="ca-btn-primary-3 w-bg"
                   style={{
-                    backgroundColor: "#000", // Button black background
-                    color: "#f12d21", // Yellow text
+                    backgroundColor: "#d11207", // Button black background
+                    color: "#fff", // Yellow text
                     textDecoration: "none"
                   }}
                 >
                   Get Started{" "}
-                  <span>
+                  <span style={{ backgroundColor: "#7f0c0c", color: "#fff" }}>
                     <FaAngleRight size={18} />
                   </span>
                 </Link>
@@ -112,7 +104,7 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col xl md={6} className="mb-30">
+              <Col xl={4} md={6} className="mb-30">
                 <div className="ca-footer widget-2">
                   <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
                     Quick Links
@@ -131,65 +123,69 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col xl md={6} className="mb-30">
+              <Col xl={4} md={12} className="mb-30">
                 <div className="ca-footer widget-3">
                   <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
-                    Other Links
+                    Our Services
                   </h4>
-                  <div className="ca-footer-menu ca-footer-menu-3">
-                    <ul>
-                      {footerData.otherLinks.map((link, index) => (
-                        <li key={index}>
-                          <Link to={link.url} style={{ color: "#f12d21" }}>
-                            {link.text}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="ca-ft-content">
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center mb-2">
+                        <div 
+                          className="me-3" 
+                          style={{ 
+                            width: "6px", 
+                            height: "6px", 
+                            backgroundColor: "#f12d21",
+                            borderRadius: "50%"
+                          }}
+                        ></div>
+                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Freight Transportation</h6>
+                      </div>
+                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
+                        Reliable cargo delivery nationwide
+                      </p>
+                    </div>
+                    
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center mb-2">
+                        <div 
+                          className="me-3" 
+                          style={{ 
+                            width: "6px", 
+                            height: "6px", 
+                            backgroundColor: "#f12d21",
+                            borderRadius: "50%"
+                          }}
+                        ></div>
+                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Logistics Solutions</h6>
+                      </div>
+                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
+                        Comprehensive supply chain management
+                      </p>
+                    </div>
+                    
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center mb-2">
+                        <div 
+                          className="me-3" 
+                          style={{ 
+                            width: "6px", 
+                            height: "6px", 
+                            backgroundColor: "#f12d21",
+                            borderRadius: "50%"
+                          }}
+                        ></div>
+                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Warehouse Storage</h6>
+                      </div>
+                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
+                        Secure storage and inventory management
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Col>
 
-              <Col xl={4} md={6} className="mb-30">
-                <div className="ca-footer widget-4">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
-                    Subscribe
-                  </h4>
-                  <div className="ca-ft-content">
-                    <p className="pb-32" style={{ color: "#fff" }}>
-                      {footerData.subscriptionText}
-                    </p>
-                  </div>
-                  <div className="ca-footer-email-sub ca-footer-email-sub-3">
-                    <form action="#">
-                      <input
-                        type="email"
-                        placeholder="Email Address.."
-                        style={{
-                          backgroundColor: "#333",
-                          borderColor: "#FFC107",
-                          color: "#E8D8D0" // The input text remains yellow; placeholder will be white via the CSS rule
-                        }}
-                      />
-                    </form>
-                    <button
-                      className="ca-btn-primary ca-btn-primary-3 br-50"
-                      type="submit"
-                      value="submit"
-                      style={{
-                        backgroundColor: "#000",
-                        color: "#f12d21",
-                        border: "1px solid rgb(243, 237, 237)"
-                      }}
-                    >
-                      Subscribe Now{" "}
-                      <span>
-                        <FaAngleRight size={18} />
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </Col>
             </Row>
 
             <Row>

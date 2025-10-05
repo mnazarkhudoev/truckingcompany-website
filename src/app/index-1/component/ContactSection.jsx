@@ -16,9 +16,9 @@ const ContactSection = () => {
     message: ""
   });
   const contactInfo = {
-    address: "198 West 21th Street, New York NY City 1010",
-    email: "freightexpress@mail.com",
-    phone: "123-456-7890"
+    address: "25 N CROW POINT RD LINCOLN, RI 02865",
+    email: "ib.trucking@yahoo.com",
+    phone: "+14015958647"
   };
   const serviceOptions = [{
     value: "1",

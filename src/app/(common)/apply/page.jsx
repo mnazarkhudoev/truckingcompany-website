@@ -132,7 +132,7 @@ const Apply = () => {
                         name="firstName"
                         type="text"
                         className="form-control"
-                        placeholder="John"
+                        placeholder="First Name"
                         value={form.firstName}
                         onChange={onChange}
                         required
@@ -149,7 +149,7 @@ const Apply = () => {
                         name="lastName"
                         type="text"
                         className="form-control"
-                        placeholder="Doe"
+                        placeholder="Last Name"
                         value={form.lastName}
                         onChange={onChange}
                         required

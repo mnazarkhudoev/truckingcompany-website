@@ -69,12 +69,37 @@ const NavBar = () => {
               aria-controls="mobile-menu"
               aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen(true)}
-              style={{ color: '#6c757d', borderColor: '#6c757d' }}
+              style={{
+                background: 'linear-gradient(135deg, #f12d21 0%, #ff6b6b 100%)',
+                border: 'none',
+                borderRadius: '12px',
+                padding: '12px',
+                color: '#ffffff',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(241, 45, 33, 0.3)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(241, 45, 33, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 15px rgba(241, 45, 33, 0.3)';
+              }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
-                <rect x="10" width="20" height="2" fill="currentColor"></rect>
-                <rect x="5" y="7" width="25" height="2" fill="currentColor"></rect>
-                <rect x="10" y="14" width="20" height="2" fill="currentColor"></rect>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="24" 
+                height="18" 
+                viewBox="0 0 24 18"
+                style={{ transition: 'all 0.3s ease' }}
+              >
+                <rect x="2" y="2" width="20" height="2" fill="currentColor" rx="1"></rect>
+                <rect x="2" y="8" width="20" height="2" fill="currentColor" rx="1"></rect>
+                <rect x="2" y="14" width="20" height="2" fill="currentColor" rx="1"></rect>
               </svg>
             </button>
           </div>
