@@ -1,0 +1,1 @@
+import{j as e,S as o}from"./index-CI7Y8WkT.js";const a=({title:r,description:t,icon:n})=>e.jsxs(e.Fragment,{children:[e.jsx("title",{children:r??"Iron Bull Trucking"}),t&&e.jsx("meta",{property:"og:description",content:t}),e.jsx("link",{rel:"icon",href:n??o,type:"image/png"})]});export{a as P};
