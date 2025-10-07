@@ -15,8 +15,12 @@ const Apply = () => {
 
   // Initialize EmailJS (do this once when component mounts)
   React.useEffect(() => {
-    // Replace with your actual public key
-    emailjs.init("CqAnAzNcPkTokkPNq");
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    } else {
+      console.error("EmailJS public key is not configured. Please check your .env file.");
+    }
   }, []);
 
   const onChange = (e) => {
@@ -29,9 +33,13 @@ const Apply = () => {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration
-      const SERVICE_ID = '1000000621'; // Replace with your EmailJS service ID
-      const TEMPLATE_ID = 'template_8kcbq3o'; // Replace with your EmailJS template ID
+      // EmailJS configuration from environment variables
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      
+      if (!SERVICE_ID || !TEMPLATE_ID) {
+        throw new Error("EmailJS configuration is missing. Please check your environment variables.");
+      }
       
       // Format the current date
       const currentDate = new Date().toLocaleString('en-US', {
