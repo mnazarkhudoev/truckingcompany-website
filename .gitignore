@@ -27,3 +27,8 @@ Thumbs.db
 
 # VS Code settings
 .vscode/
+
+# Documentation with sensitive information
+DNS-SETUP-GUIDE.md
+DEPLOYMENT-GUIDE.md
+SECURITY-AUDIT.md

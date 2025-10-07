@@ -82,7 +82,7 @@ const Apply = () => {
       });
     } catch (error) {
       console.error("Failed to send email:", error);
-      alert("Failed to submit application. Please try again or contact us directly at 501848416muzaffar@gmail.com");
+      alert("Failed to submit application. Please try again or contact us directly at ib.trucking@yahoo.com");
     } finally {
       setIsSubmitting(false);
     }

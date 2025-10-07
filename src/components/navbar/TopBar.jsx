@@ -15,8 +15,8 @@ const TopBar = () => {
                 </span>
               </div>
               <div className="ca-header-top-text">
-                <Link to="mailto:demo@gmail.com" className="ca-top-title text-white">
-                  Demo@gmail.com
+                <Link to="mailto:ib.trucking@yahoo.com" className="ca-top-title text-white">
+                  ib.trucking@yahoo.com
                 </Link>
               </div>
             </div>
@@ -30,7 +30,7 @@ const TopBar = () => {
               </div>
               <div className="ca-header-top-text">
                 <Link to="" className="ca-top-title text-white">
-                  73 Bridge St Brooklyn, USA.
+                  25 N Crow Point Rd Lincoln, RI 02865
                 </Link>
               </div>
             </div>
@@ -57,8 +57,8 @@ const TopBar = () => {
                 </span>
               </div>
               <div className="ca-header-top-text">
-                <Link to="tel:+92152226132" className="ca-top-title text-white">
-                  Call Now: +921 5222 6132
+                <Link to="tel:+14015958647" className="ca-top-title text-white">
+                  Call Now: +1 401-595-8647
                 </Link>
               </div>
             </div>

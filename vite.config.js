@@ -15,7 +15,8 @@ export default defineConfig(({ command }) => {
 
   // Only set base path for production builds (GitHub Pages)
   if (command === 'build') {
-    config.base = '/truckingcompany-website';
+    // Using custom domain, so base path should be '/'
+    config.base = '/';
   }
 
   return config;
