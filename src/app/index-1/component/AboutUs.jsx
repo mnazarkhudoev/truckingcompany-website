@@ -57,7 +57,7 @@ const AboutUs = () => {
             <div className="ca-about-intro">
               <h3 className="text-white mb-20 fnw-600">Our Story</h3>
               <p className="text-white mb-20">
-              Established in 1999, IB Trucking Inc. (a.k.a Iron Bull Trucking ) has a long-standing presence in the transportation industry. Today, the company is under new management led by two partners who bring complementary strengths: one with extensive corporate finance and private equity experience, and the other with deep, hands-on expertise in trucking, from driver to fleet owner.
+              Established in 1999, IB Trucking Inc. (a.k.a Iron Bull Trucking Inc. ) has a long-standing presence in the transportation industry. Today, the company is under new management led by two partners who bring complementary strengths: one with extensive corporate finance and private equity experience, and the other with deep, hands-on expertise in trucking, from driver to fleet owner.
 
 Behind the leadership, our team is committed to safety, compliance, and outstanding service. With 24/7 dispatch support and a strong safety and compliance program, we ensure every load is handled with professionalism and care. Over the years, we have built and maintained multi-year relationships with leading freight brokers, reflecting the trust and reliability we bring to every partnership.
 
