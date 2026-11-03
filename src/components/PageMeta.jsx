@@ -1,13 +1,9 @@
-import defaultFavicon from "@/assets/img/logo/ca-logo3.1.png";
-const PageMeta = ({
-  title,
-  description,
-  icon
-}) => {
-  return <>
-      <title>{title ?? "Iron Bull Trucking"}</title>
-      {description && <meta property="og:description" content={description} />}
-      <link rel="icon" href={icon ?? defaultFavicon} type="image/png" />
-    </>;
-};
+// React 19 hoists <title> and <meta> into <head>.
+const PageMeta = ({ title, description }) => (
+  <>
+    <title>{title ? `${title} | Iron Bull Trucking` : "Iron Bull Trucking | Regional freight carrier in Lincoln, RI"}</title>
+    {description && <meta name="description" content={description} />}
+  </>
+);
+
 export default PageMeta;

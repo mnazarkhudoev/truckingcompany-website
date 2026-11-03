@@ -1,221 +1,52 @@
-import logo3 from "@/assets/img/logo/ca-logo3.1.png";
-import footerShape3 from "@/assets/img/shape/ca-footer-shape3.1.png";
-import footer_Shape3_1 from "@/assets/img/shape/cta-shape-3.1.png";
 import { Link } from "react-router-dom";
-import { Col, Container, Row } from "react-bootstrap";
-import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import logo from "@/assets/images/logo.webp";
+import { company, navLinks } from "@/data/company";
 
-const footerData = {
-  description: "Our global reach, combined with local expertise, ensures that your goods are transported safely, on time.",
-  socialLinks: [
-    { icon: <FaInstagram style={{ color: "#E1306C" }} />, url: "#" },  // Instagram
-    { icon: <FaFacebookF style={{ color: "#1877F2" }} />, url: "#" },   // Facebook
-    { icon: <FaLinkedinIn style={{ color: "#0077B5" }} />, url: "#" },   // LinkedIn
-    { icon: <FaXTwitter style={{ color: "#1DA1F2" }} />, url: "#" }      // Twitter
-  ],
-  quickLinks: [
-    { text: "Home", url: "/index-1" },
-    { text: "Service", url: "/services" },
-    { text: "About Us", url: "/about" },
-    { text: "Latest News", url: "/blog" },
-    { text: "Contact Us", url: "/contact" }
-  ],
-  copyrightText: "Copyright © 2025 Iron Bull. All Rights Reserved",
-  legalLinks: [
-    { text: "Terms & Conditions", url: "#" },
-    { text: "Privacy Policy", url: "#" }
-  ]
-};
-
-const Footer = () => {
-  return (
-    <footer
-      className="theme-bg-3"
-      style={{ backgroundColor: "#000", color: "#FFC107" }} // Black background, yellow text for headings and links
-    >
-      <div className="ca-ft-shape p-absolute ft-shape-2">
-        <img src={footerShape3} alt="" />
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="tape" aria-hidden="true" />
+    <div className="container site-footer__grid">
+      <div className="site-footer__brand">
+        <img src={logo} alt="" width="64" height="64" />
+        <p>
+          {company.legalName}, also known as {company.name}. Regional freight out of Lincoln, Rhode
+          Island since {company.founded}.
+        </p>
       </div>
-      <div className="ca-cta-area p-relative z-index-1">
-        <div className="container">
-          <div className="ca-cta-shape3 p-absolute d-none d-lg-block">
-            <img src={footer_Shape3_1} alt="" />
-          </div>
-          <Row className="align-items-center">
-            <Col lg={6} className="mb-30">
-              <div className="ca-cta-content">
-                <h2
-                  className="ca-section-title cta-title-1 fnw-700"
-                  style={{ color: "#f12d21" }} // Yellow title
-                >
-                  Join Us Today And let Us Help You To Grow Your Business.
-                </h2>
-              </div>
-            </Col>
-            <Col lg={6} className="mb-30">
-              <div className="ca-btn-cta-3 text-end">
-                <Link
-                  to="/contact"
-                  className="ca-btn-primary-3 w-bg"
-                  style={{
-                    backgroundColor: "#d11207", // Button black background
-                    color: "#fff", // Yellow text
-                    textDecoration: "none"
-                  }}
-                >
-                  Get Started{" "}
-                  <span style={{ backgroundColor: "#7f0c0c", color: "#fff" }}>
-                    <FaAngleRight size={18} />
-                  </span>
-                </Link>
-              </div>
-            </Col>
-          </Row>
-          <div className="b-bottom pt-48"></div>
-        </div>
+
+      <nav aria-label="Footer">
+        <h2 className="site-footer__heading">Site</h2>
+        <ul>
+          {navLinks.map(link => (
+            <li key={link.hash}>
+              <Link to={{ pathname: "/", hash: link.hash }}>{link.label}</Link>
+            </li>
+          ))}
+          <li>
+            <Link to="/apply">Apply to drive</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 className="site-footer__heading">Contact</h2>
+        <address>
+          {company.street}
+          <br />
+          {company.city}
+          <br />
+          <a href={company.phoneHref}>{company.phone}</a>
+          <br />
+          <a href={`mailto:${company.email}`}>{company.email}</a>
+        </address>
       </div>
-      <div className="ca-footer-area">
-        <Container>
-          <div className="ca-ft-area w-bg" style={{ backgroundColor: "#000", color: "#FFC107" }}>
-            <Row>
-              <Col xl={4} md={6} className="mb-30">
-                <div className="ca-footer widget-1">
-                  <div className="ca-ft-logo">
-                    <Link to="/index-1">
-                      <img src={logo3} alt="" />
-                    </Link>
-                  </div>
-                  <div className="ca-ft-content ca-ft-content-3 mb-24">
-                    <p className="pt-16" style={{ color: "#fff" }}>
-                      {footerData.description}
-                    </p>
-                  </div>
-                  <div className="ca-footer-social ca-footer-social-3">
-                    <ul>
-                      {footerData.socialLinks.map((link, index) => (
-                        <li key={index}>
-                          <Link to={link.url}>
-                            {link.icon}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-
-              <Col xl={4} md={6} className="mb-30">
-                <div className="ca-footer widget-2">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
-                    Quick Links
-                  </h4>
-                  <div className="ca-footer-menu ca-footer-menu-3">
-                    <ul>
-                      {footerData.quickLinks.map((link, index) => (
-                        <li key={index}>
-                          <Link to={link.url} style={{ color: "#f12d21" }}>
-                            {link.text}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-
-              <Col xl={4} md={12} className="mb-30">
-                <div className="ca-footer widget-3">
-                  <h4 className="ca-title fnw-700 pb-24" style={{ color: "#f12d21" }}>
-                    Our Services
-                  </h4>
-                  <div className="ca-ft-content">
-                    <div className="mb-3">
-                      <div className="d-flex align-items-center mb-2">
-                        <div 
-                          className="me-3" 
-                          style={{ 
-                            width: "6px", 
-                            height: "6px", 
-                            backgroundColor: "#f12d21",
-                            borderRadius: "50%"
-                          }}
-                        ></div>
-                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Freight Transportation</h6>
-                      </div>
-                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
-                        Reliable cargo delivery nationwide
-                      </p>
-                    </div>
-                    
-                    <div className="mb-3">
-                      <div className="d-flex align-items-center mb-2">
-                        <div 
-                          className="me-3" 
-                          style={{ 
-                            width: "6px", 
-                            height: "6px", 
-                            backgroundColor: "#f12d21",
-                            borderRadius: "50%"
-                          }}
-                        ></div>
-                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Logistics Solutions</h6>
-                      </div>
-                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
-                        Comprehensive supply chain management
-                      </p>
-                    </div>
-                    
-                    <div className="mb-3">
-                      <div className="d-flex align-items-center mb-2">
-                        <div 
-                          className="me-3" 
-                          style={{ 
-                            width: "6px", 
-                            height: "6px", 
-                            backgroundColor: "#f12d21",
-                            borderRadius: "50%"
-                          }}
-                        ></div>
-                        <h6 style={{ color: "#fff", margin: 0, fontSize: "16px" }}>Warehouse Storage</h6>
-                      </div>
-                      <p style={{ color: "#ccc", fontSize: "14px", marginLeft: "20px" }}>
-                        Secure storage and inventory management
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Col>
-
-            </Row>
-
-            <Row>
-              <Col lg={12}>
-                <div className="copy-right-border border-1" style={{ borderColor: "#E8D8D0" }}></div>
-              </Col>
-              <div className="col-lg-6">
-                <p className="copry-right-text pt-24" style={{ color: "#fff" }}>
-                  {footerData.copyrightText}
-                </p>
-              </div>
-              <Col lg={6}>
-                <div className="copy-right-menu pt-24">
-                  <ul>
-                    {footerData.legalLinks.map((link, index) => (
-                      <li key={index}>
-                        <Link to={link.url} style={{ color: "#f12d21" }}>
-                          {link.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
-    </footer>
-  );
-};
+    </div>
+    <div className="container site-footer__legal">
+      <p>
+        © {new Date().getFullYear()} {company.legalName} All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
 
 export default Footer;
