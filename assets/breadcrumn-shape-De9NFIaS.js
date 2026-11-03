@@ -1,1 +1,0 @@
-const a="/assets/breadcrumn-shape-wg_bHaqY.png";export{a as b};
